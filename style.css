@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(88, 88, 88);
+  font-size: 1.5em;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body {
+  background-color: rgb(231, 231, 231);
+}
+
+.header {
+  max-width: 1000px;
+  margin: 40px auto;
+}
+.menu {
+  background: linear-gradient(
+    180deg,
+    rgba(214, 214, 214, 1) 0%,
+    rgba(181, 181, 181, 1) 99%
+  );
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+.menu > .menu-item {
+  position: relative;
+  border-right: 1px solid rgb(143, 142, 142);
+}
+
+.menu .menu-item:last-child {
+  border: none;
+}
+.menu > .menu-item > a {
+  padding: 20px 12px 20px 25px;
+  gap: 10px;
+  text-transform: uppercase;
+}
+/* .menu .menu-item a {
+  display: flex;
+  gap: 10px;
+} */
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  padding: 10px 0;
+  background-color: rgba(181, 181, 181, 1);
+  border-radius: 0 0 10px 10px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-item {
+  position: relative;
+}
+.dropdown-item > a {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(143, 142, 142);
+}
+.dropdown-item:last-child > a {
+  border: none;
+}
+.dropdown-sub > .dropdown-sub-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  padding: 20px;
+  background-color: rgba(181, 181, 181, 1);
+  border-radius: 0 10px 10px 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+}
+.dropdown-sub:hover .dropdown-sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.dropdown-sub-item > a {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(143, 142, 142);
+}
+.dropdown-sub-item:last-child > a {
+  border: none;
+}
