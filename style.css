@@ -82,6 +82,13 @@ body {
   padding: 10px 20px;
   border-bottom: 1px solid rgb(143, 142, 142);
 }
+.dropdown-item > a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 .dropdown-item:last-child > a {
   border: none;
 }
@@ -113,4 +120,11 @@ body {
 }
 .dropdown-sub-item:last-child > a {
   border: none;
+}
+.dropdown-sub-item > a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
